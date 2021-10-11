@@ -1,0 +1,17 @@
+@import './functions';
+@import './mixins';
+
+%container {
+    // display: flex;
+    // justify-content: center;
+    // width: 100%;
+    // margin-left: auto;
+    // margin-right: auto;
+    padding-left: fluid(20, 130);
+    padding-right: fluid(20, 130);
+
+    @include max(768) {
+        padding-left: rem(15);
+        padding-right: rem(15);
+    }
+}

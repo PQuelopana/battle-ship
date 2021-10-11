@@ -1,0 +1,12 @@
+@import '../../assets/scss/global';
+
+.home {
+    display: grid;
+    row-gap: fluid(20);
+
+    &__title {
+        font-size: fluid(40);
+        font-weight: 800;
+        justify-self: center;
+    }
+}

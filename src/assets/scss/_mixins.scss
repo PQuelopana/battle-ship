@@ -1,0 +1,16 @@
+/*
+
+    max
+        - Outputs styles that will only take effect if the site width is less than or equal to the number of pixels passed in.
+
+    [EXAMPLE]
+        @include max(1023) {
+            padding: 20px;
+        }
+
+*/
+@mixin max($breakpoint) {
+    @media screen and (max-width: #{ $breakpoint - 1 }px) {
+        @content;
+    }
+}

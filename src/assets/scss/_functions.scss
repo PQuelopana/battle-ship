@@ -1,0 +1,49 @@
+/*
+    Functions
+        - Helper functions that can be leveraged when writing new styles.
+
+    [TABLE OF CONTENTS]
+        - fluid
+        - rem
+*/
+
+/*
+    fluid
+        - Allows you to implement fluid responsive design for numeric CSS properties.
+        - Just pass the mobile and desktop pixels you want (without the "px" part).
+        - Note that the desktop pixel value will only be applied at the 1440px viewport width
+             ... if you want to use a different threshold then the $growth-ratio will need to be adjusted
+
+    [EXAMPLES]
+        .foo {
+            font-size: fluid(12, 64);
+        }
+
+        /// if the mobile and desktop sizes happen to be the same, you can pass a single value
+        .foo {
+            font-size: fluid(32);
+        }
+*/
+@function fluid($mobile, $desktop: null) {
+    @if $desktop == null {
+        $desktop: $mobile
+    }
+
+    $growth-ratio: 14.22;
+    $desktop-vw: $desktop / $growth-ratio;
+
+    @return m#{a}x(#{ rem($mobile) }, #{ $desktop-vw }vw);
+}
+
+/*
+    rem
+        - Allows you to easily convert from px units to rem without having to use a calculator.
+
+    [EXAMPLE]
+        .foo {
+            font-size: rem(36); // 2.25rem (assuming the document root is 16px)
+        }
+*/
+@function rem($px) {
+    @return #{ $px / 16 }rem;
+}

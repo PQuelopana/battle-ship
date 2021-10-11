@@ -1,0 +1,24 @@
+@import '../../assets/scss/global';
+
+.board {
+    display: grid;
+    gap: fluid(10);
+    justify-items: center;
+
+    &__title {
+        font-size: fluid(30);
+        font-weight: 700;
+    }
+
+    &__message-informative {
+        font-size: fluid(16);
+
+        &.is-inactive {
+            display: none;
+        }
+    }
+
+    &__message-shot {
+        font-size: fluid(16);
+    }
+}

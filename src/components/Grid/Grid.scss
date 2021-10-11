@@ -1,0 +1,17 @@
+@import '../../assets/scss/global';
+
+.grid {
+    display: grid;
+
+    &__board {
+        display: grid;
+        grid-template-columns: repeat(11, fluid(25));
+        grid-template-rows: repeat(11, fluid(25));
+        justify-self: center;
+    }
+
+    &__column, &__row {
+        font-size: fluid(16);
+        text-align: center;
+    }
+}

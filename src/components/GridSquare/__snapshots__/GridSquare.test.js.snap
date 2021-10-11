@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests in <GridSquare /> should render <GridSquare /> correctly 1`] = `
+<div
+  className="square"
+  onClick={[Function]}
+/>
+`;

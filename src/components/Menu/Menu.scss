@@ -1,0 +1,27 @@
+@import '../../assets/scss/global';
+
+.menu {
+    display: grid;
+    justify-self: left;
+
+    &__title {
+        font-size: fluid(20);
+        font-weight: 500;
+    }
+
+    &__options {
+        display: grid;
+    }
+
+    &__option {
+        cursor: pointer;
+        font-size: fluid(16);
+        list-style-type: none;
+        transition: text-shadow .3s;
+
+        &:hover {
+            color: black;
+            text-shadow: fluid(1) 0 fluid(1) black;
+        }
+    }
+}

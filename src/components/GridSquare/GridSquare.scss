@@ -1,0 +1,33 @@
+@import '../../assets/scss/global';
+
+.square {
+    border: fluid(1) solid #7d7d7d;
+    transition: all .5s;
+
+    &.exist-shot {
+        background-color: orange;
+    }
+
+    &.is-occupied {
+
+        &.is-black {
+            background-color: black;
+        }
+
+        &.is-red {
+            background-color: red;
+        }
+
+        &.is-blue {
+            background-color: blue;
+        }
+
+        &.is-yellow {
+            background-color: yellow;
+        }
+    }
+
+    &.game-over, &.is-timer-active {
+        opacity: .5;
+    }
+}
